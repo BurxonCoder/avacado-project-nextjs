@@ -1,16 +1,34 @@
-import styles from "../styles/Intro.module.css";
+import style from "../styles/Intro.module.css";
+import Image from "next/image";
+import Circle from "./Circle";
 
 const Intro = () => {
   return (
-    <div className={styles.container}>
-        <div className={styles.card}>
-            <h1 className={styles.title}>
-                <span className={styles.brand}>AVOCADO</span>DIGITAL PRODUCT AGENCY</h1>
-        </div>
-        <div className={styles.card}>second</div>
-
+    <div className={style.container}>
+  
+      <Circle backgroundColor="#b0ff49" top="-45vh" left="-45vh" />
+      <Circle backgroundColor="#01c686" right="-40vh" />
+      <div className={style.card}>
+        <h1 className={style.title}>
+          <span className={style.brandName}>AV0CAD0</span> DIGITAL PRODUCT
+          AGENCY
+        </h1>
+        <p className={style.desc}>
+          Create live segments and target the right people for messages based on
+          their behaviors.
+        </p>
+        <button className={style.button}>DISCOVER</button>
+      </div>
+      <div className={style.card}>
+        <Image
+          src={"/img/Avocado.png"}
+          layout="fill"
+          objectFit="cover"
+          alt=""
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;
